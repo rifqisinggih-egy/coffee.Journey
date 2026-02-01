@@ -107,7 +107,7 @@ body {
   /* TAMBAHKAN INI: beri jarak atas agar tidak tertutup navbar (sekitar 7-8rem) */
   padding-top: 8rem;
 
-  background-image: url(/img/kopi\ 2\ .jpg);
+  background-image: url("../img/kopi-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -446,5 +446,3 @@ footer .credit a {
     font-size: 55%;
   }
 }
-
-/* navbar selesai gais */
