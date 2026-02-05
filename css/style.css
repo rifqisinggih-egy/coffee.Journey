@@ -169,13 +169,15 @@ body {
 
 .about,
 .personal,
-.contact {
+.contact,
+.beans {
   padding: 8rem 7% 1.4rem;
 }
 
 .about h2,
 .personal h2,
-.contact h2 {
+.contact h2,
+.beans h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
@@ -216,14 +218,16 @@ body {
 }
 /* about selesai */
 
-/* menu start */
+/* personal start */
 .personal h2,
-.contact h2 {
+.contact h2,
+.beans h2 {
   margin-bottom: 1rem;
 }
 
 .personal p,
-.contact p {
+.contact p,
+.beans p {
   text-align: center;
   font-weight: 100;
   font-size: 1.4rem;
@@ -237,23 +241,90 @@ body {
   flex-wrap: wrap;
   margin-top: 5rem;
   justify-content: center;
+  gap: 2rem; /* Memberi jarak antar kartu agar tidak menempel */
 }
 
 .personal .row .personal-card {
   text-align: center;
   padding-bottom: 4rem;
+  flex: 1 1 25rem; /* MEMBUAT KARTU SEJAJAR: Lebar dasar 25rem, bisa tumbuh */
+  max-width: 30rem; /* Membatasi agar kartu tidak terlalu lebar di layar besar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.personal .row .personal-card p {
+  text-align: left; /* Teks dalam paragraf rata kiri */
+  align-self: center; /* center agar container resep ditengah gais */
+  width: auto; /* AUTO: agar teks memanjang normal */
+  min-width: 150px;
+  margin: 0.2rem auto; /* 'auto' pada margin kiri-kanan akan menjaga paragraf di tengah kartu */
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
 .personal .row .personal-card img {
-  border-radius: 50%;
-  width: 60%;
+  border-radius: 20%;
+  width: 200px; /* Tentukan lebar pasti */
+  height: 200px; /* Tentukan tinggi pasti */
+  object-fit: contain; /* PENTING: Gambar tidak gepeng meski ukurannya beda */
+  margin-bottom: 1rem;
 }
 
 .personal .row .personal-card-title {
-  margin-top: 1.5rem auto 0.5rem;
+  margin-top: 1.5rem 0 0.5rem; /* Memperbaiki penulisan margin */
+  mix-blend-mode: difference;
+  font-size: 1.4rem;
+}
+
+/* agar teks deskripsi rapi */
+.personal-card-story {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.personal-card p {
+  font-size: 1.2rem !important; /* Memastikan ukuran teks resep konsisten */
+  line-height: 1.2;
+}
+
+.resep {
+  margin-top: 1.5rem; /* Memberikan jarak atas yang konsisten (pengganti <br>) */
+  text-align: left; /* Membuat teks resep rata kiri */
+  display: flex; /* pakai ini biar teks p nya rapi */
+  flex-direction: column;
+  align-items: flex-start; /* menjaga konsisten agar text dikiri */
+}
+
+.resep p {
+  margin-bottom: 0.4rem; /* Jarak antar baris resep */
+  font-size: 1.2rem;
+  font-weight: 100; /* Agar tidak terlalu tebal */
   mix-blend-mode: difference;
 }
-/* menu end */
+/* personal end */
+
+/* beans start */
+.beans .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.beans .row .beans-card {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+.beans .row .beans-card-img {
+  border-radius: 20%;
+  width: 40%;
+}
+.beans .row .beans-card-title {
+  mix-blend-mode: difference;
+}
+/* beans end */
 
 /* contact start */
 .contact .row {
