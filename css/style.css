@@ -71,10 +71,26 @@ body {
 .navbar .navbar-nav a:hover::after {
   transform: scaleX(0.5);
 }
+/* Update pada bagian navbar-extra */
+.navbar .navbar-extra {
+  display: flex; /* Mengaktifkan flexbox */
+  align-items: center; /* Kunci agar ikon & gambar sejajar di tengah secara vertikal */
+  gap: 0.5rem; /* Memberi jarak antar elemen */
+}
+
+.navbar .navbar-extra img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover; /* Agar gambar tidak gepeng */
+  border-radius: 50%; /* buat gambar profil jadi bulat */
+  border: 1px solid white; /* bingkai tipis pada foto */
+  margin-left: 0.5rem;
+}
 
 .navbar .navbar-extra a {
   color: white;
-  margin: 0 0.5rem;
+  display: flex; /* Supaya ikon di dalam <a> juga mudah diatur posisinya */
+  align-items: center;
 }
 
 .navbar .navbar-extra a:hover {
@@ -199,7 +215,7 @@ body {
 .about .row .content {
   flex: 1 1 35rem;
   padding: 0 2rem;
-  margin-top: 3rem;
+  margin-top: 0.5rem;
 }
 
 .about .row .content h3 {
